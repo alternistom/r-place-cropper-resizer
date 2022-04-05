@@ -6,13 +6,13 @@ cropped = "rplace_arch_images_here\\cropped"
 resized = "rplace_arch_images_here\\cropped\\resized"
 
 if not os.path.exists(path):
-				os.makedirs(path)
+	os.makedirs(path)
         
 if not os.path.exists(cropped):
-				os.makedirs(cropped)
+	os.makedirs(cropped)
         
 if not os.path.exists(resized):
-				os.makedirs(resized)
+	os.makedirs(resized)
         
 dirs = os.listdir(path)
 
