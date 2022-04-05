@@ -27,10 +27,10 @@ def cropAndResize(counter: int):
 
             im = Image.open(fullpath)
             f, e = os.path.splitext(fullpath)
-            imCrop = im.crop((535, 70, 894, 252))
+            imCrop = im.crop((535, 70, 894, 252)) # YOU CAN DEFINE THE AREA YOU WANT WITH https://pillow.readthedocs.io/en/stable/_modules/PIL/Image.html#Image.crop
             imCrop.save(cropped + "\\cropped_" + item, "PNG", quality=100)
             
-            basewidth = 3840
+            basewidth = 3840 # SET BASEWIDTH HERE
             wpercent = (basewidth/float(imCrop.size[0]))
             hsize = int((float(imCrop.size[1])*float(wpercent)))
             img = imCrop.resize((basewidth,hsize), Image.NEAREST)
